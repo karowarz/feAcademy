@@ -27,11 +27,15 @@
     "@storybook/addon-links": "^6.5.10",
     "@storybook/builder-webpack5": "^6.5.10",
     "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
-    "eslint-plugin-storybook": "^0.6.4"
+    "eslint-plugin-storybook": "^0.6.4",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1"
   }
 }

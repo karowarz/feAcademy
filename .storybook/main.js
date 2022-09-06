@@ -1,15 +1,24 @@
 module.exports = {
-  "stories": [
-    "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
-  ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-webpack5"
-  }
-}
+	'stories': [
+		'../components/**/*.stories.@(js|jsx|ts|tsx)'
+	],
+	'addons': [
+		'@storybook/addon-links',
+		'@storybook/addon-essentials',
+		'@storybook/addon-interactions',
+		{
+			name: '@storybook/preset-scss',
+			options: {
+				cssLoaderOptions: {
+					modules: {
+						localIdentName: '[name]_[local]__[hash:base64:5]',
+					}
+				}
+			}
+		},
+	],
+	'framework': '@storybook/react',
+	'core': {
+		'builder': '@storybook/builder-webpack5'
+	}
+};

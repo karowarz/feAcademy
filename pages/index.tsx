@@ -1,6 +1,9 @@
+// @ts-ignore
 import Head from 'next/head';
+// @ts-ignore
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
+import {Teaser} from '../components/Teaser';
 
 export default function Home() {
 	return (<div className={styles.container}>
@@ -13,6 +16,7 @@ export default function Home() {
 				<main className={styles.main}>
 					<h1 className={styles.title}>
 						Welcome to <a href="https://nextjs.org">Next.js!</a>
+						<Teaser title={'eloeleo'}>hej</Teaser>
 					</h1>
 
 					<p className={styles.description}>
