@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
-import {Teaser} from '../components/Teaser';
 import {Button} from '../components/Button/Button';
 
 export default function Home() {
