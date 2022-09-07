@@ -1,28 +1,48 @@
 module.exports = {
-	env: {
-		browser: true,
-		es2021: true,
-		node: true
+	'env': {
+		'browser': true,
+		'es2021': true,
+		'node': true,
+		'jest': true
 	},
-	settings: {
-		react: {
-			version: 'detect'
-		}
-	},
-	extends: [
+
+	'extends': [
+		'eslint:recommended',
 		'plugin:react/recommended',
-		'standard-with-typescript'
+		'plugin:@typescript-eslint/recommended'
 	],
-	overrides: [],
-	parserOptions: {
-		ecmaVersion: 'latest',
-		sourceType: 'module',
-		ecmaFeatures: {
-			jsx: true
-		}
+	'overrides': [],
+	'parser': '@typescript-eslint/parser',
+	'parserOptions': {
+		'ecmaVersion': 'latest',
+		'sourceType': 'module'
 	},
-	plugins: [
-		'react'
+	'plugins': [
+		'react',
+		'@typescript-eslint',
+		'prettier',
 	],
-	rules: {}
+	'rules': {
+		'no-use-before-define': 0,
+		'@typescript-eslint/no-use-before-define': ['error'],
+		'react/prop-types': 0,
+		'react/jsx-filename-extension': ['error', {extensions: ['.tsx']}],
+		'react/react-in-jsx-scope': 0
+		// 'indent': [
+		// 	'error',
+		// 	'tab'
+		// ],
+		// 'linebreak-style': [
+		// 	'error',
+		// 	'unix'
+		// ],
+		// 'quotes': [
+		// 	'error',
+		// 	'single'
+		// ],
+		// 'semi': [
+		// 	'error',
+		// 	'always'
+		// ]
+	}
 };
