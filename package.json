@@ -67,8 +67,5 @@
   },
   "moduleNameMapper": {
     "\\.(css|scss)$": "identity-obj-proxy"
-  },
-  "transform": {
-    "\\.js$": "<rootDir>/node_modules/babel-jest"
-  }
+ }
 }
