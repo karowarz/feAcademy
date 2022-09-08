@@ -1,7 +1,7 @@
 import React, {ButtonHTMLAttributes} from 'react';
 import styles from './Buttton.module.scss';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	/**
 	 * Is this the principal call to action on the page?
 	 */
@@ -22,17 +22,20 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 	 * Optional click handler
 	 */
 	onClick?: () => void;
+
+	disabled?: boolean;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({primary = false, size = 'medium', backgroundColor, label, ...props}: ButtonProps) => {
+export const Button = ({primary = false, size = 'medium', disabled, backgroundColor, label, ...props}: ButtonProps) => {
+	const disabledClass = disabled ? styles['storybook-button--disabled'] : ''
 	const mode = primary ? styles['storybook-button--primary'] : styles['storybook-button--secondary'];
 	return (
 		<button
 			type="button"
-			className={[styles['storybook-button'], styles[`storybook-button--${size}`], mode].join(' ')}
+			className={[styles['storybook-button'], styles[`storybook-button--${size}`], mode, disabledClass].join(' ')}
 			style={{backgroundColor}}
 			{...props}
 		>

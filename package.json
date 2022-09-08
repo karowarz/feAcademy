@@ -11,7 +11,9 @@
     "build-storybook": "build-storybook",
     "tsc": "tsc --noEmit",
     "tsc:dev": "tsc --noEmit --watch",
-    "test": "jest"
+    "test": "jest",
+    "test:all": "jest --coverage --watchAll",
+    "test:dev": "jest --watch"
   },
   "dependencies": {
     "next": "12.2.5",
@@ -35,6 +37,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.0.0",
+    "@types/jest-axe": "^3.5.4",
     "@types/node": "^18.7.15",
     "@types/react": "^18.0.18",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
@@ -56,6 +59,7 @@
     "eslint-plugin-storybook": "^0.6.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.0.2",
+    "jest-axe": "^6.0.0",
     "jest-environment-jsdom": "^29.0.2",
     "prettier": "^2.7.1",
     "sass": "^1.54.8",
