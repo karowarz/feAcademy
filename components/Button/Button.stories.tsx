@@ -1,6 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Button } from './Button';
+import ButtonData from './Button.data';
 
 export default {
 	title: 'Components/Button',
@@ -12,37 +13,17 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-	primary: true,
-	label: 'Button',
-};
+export const Base = Template.bind({});
+Base.args = ButtonData.Base;
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-	label: 'Button',
-};
+export const Primary = Template.bind({});
+Primary.args = ButtonData.Primary;
 
 export const Large = Template.bind({});
-Large.args = {
-	size: 'large',
-	label: 'Button',
-};
+Large.args = ButtonData.Large;
 
 export const Small = Template.bind({});
-Small.args = {
-	size: 'small',
-	label: 'Button',
-};
-
-export const Medium = Template.bind({});
-Medium.args = {
-	size: 'medium',
-	label: 'Button',
-};
+Small.args = ButtonData.Small;
 
 export const Disabled = Template.bind({});
-Disabled.args = {
-	disabled: true,
-	label: 'Button'
-};
+Disabled.args = ButtonData.Disabled;
